@@ -39,7 +39,12 @@ class GfxRendererTarget final : public DrawTarget {
   // unless bound explicitly, so apps whose FONT_SMALL scales with the UI can
   // pin chrome to a fixed size without touching list subtitles.
   static constexpr FontId FONT_LABEL = 3;
-  static constexpr size_t FONT_SLOTS = 4;
+  // Fixed Noto Sans sizes for sideloaded dashboard applications. Slots 0-3
+  // retain their existing meaning for compatibility with older apps.
+  static constexpr FontId FONT_NOTOSANS_12 = 4;
+  static constexpr FontId FONT_NOTOSANS_14 = 5;
+  static constexpr FontId FONT_NOTOSANS_18 = 6;
+  static constexpr size_t FONT_SLOTS = 7;
 
   explicit GfxRendererTarget(const GfxRenderer& renderer, const bool hasTouch = false)
       : renderer(renderer), hasTouch_(hasTouch) {
