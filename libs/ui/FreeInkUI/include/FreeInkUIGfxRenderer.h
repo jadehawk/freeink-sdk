@@ -43,8 +43,9 @@ class GfxRendererTarget final : public DrawTarget {
   // retain their existing meaning for compatibility with older apps.
   static constexpr FontId FONT_NOTOSANS_12 = 4;
   static constexpr FontId FONT_NOTOSANS_14 = 5;
-  static constexpr FontId FONT_NOTOSANS_18 = 6;
-  static constexpr size_t FONT_SLOTS = 7;
+  static constexpr FontId FONT_NOTOSANS_16 = 6;
+  static constexpr FontId FONT_NOTOSANS_18 = 7;
+  static constexpr size_t FONT_SLOTS = 8;
 
   explicit GfxRendererTarget(const GfxRenderer& renderer, const bool hasTouch = false)
       : renderer(renderer), hasTouch_(hasTouch) {
